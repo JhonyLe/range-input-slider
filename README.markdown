@@ -1,12 +1,13 @@
-#Range input
+# Range input
 
 Realization of capability of range input.
 
-##Installation
+## Installation
 `npm install range-input-slider --save`
 
 ## Documentation
-###Interface:
+### Interface:
+```
     const Slider = new InputRangeSlider({
         element: document.getElementById('slider'),
         minPoint: 50,
@@ -39,11 +40,12 @@ Realization of capability of range input.
     });
 
     Slider.init();
+```
 
-###Methods
+### Methods
 *init* - range input initialization
 
-###Settings
+### Settings
 | Setting       | Type          | Description   | Example       | Required      |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | min | number | Minimum possible value of range | 1 | yes |
@@ -58,11 +60,11 @@ Realization of capability of range input.
 | cssClasses | object | Classes for all internal elements of range input. | ```{    wrapper: 'my-site-wrapper',    lineWrapper: 'my-site-line-wrapper',    line: 'my-site-line',    control: 'my-site-control',    activeRange: 'my-site-active-range',    serifs: 'my-site-serifs',    serif: 'my-site-serif'    }``` | no |
 
 
-##Development
+## Development
 ```
 $ npm install
 $ npm start
 ```
 
-##License
+## License
 MIT
