@@ -1,0 +1,65 @@
+.input-range-slider {
+  position: relative;
+  height: 20px;
+  width: 200px;
+  //background: yellow;
+  padding: 20px 5px 0 5px;
+
+  &__line-wrapper {
+    display: flex;
+    //background: red;
+    height: 20px;
+    width: 200px;
+    position: relative;
+    align-items: center;
+  }
+
+  &__line {
+    height: 5px;
+    width: 200px;
+    background: white;
+    border: 1px solid gray;
+  }
+
+  &__control {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 1px solid gray;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+
+    &_min,
+    &_max {
+      left: -10000px; // We must not see it before it will be calculated
+      margin-left: -7px;
+    }
+  }
+
+  &__active-range {
+    position: absolute;
+    height: 5px;
+    width: auto;
+    left: -10000px; // We must not see it before it will be calculated
+    right: -10000px;
+    background: #969696;
+  }
+
+  &__serifs {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    right: 0;
+
+    &-item {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      width: 40px;
+      margin-left: -20px;
+      text-align: center;
+    }
+  }
+}

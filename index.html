@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Range input slider examples</title>
+</head>
+<body>
+    <div class="header">
+        Range input slider
+    </div>
+
+    <div class="content">
+        <div class="block">
+            <h2>Range from 1 to 5 with default step and 5 serifs</h2>
+            <div id="slider-1"></div>
+            <div class="values"> Values: <span id="values-1">2 - 4</span></div>
+
+            <h3>Code</h3>
+            <pre class="code">
+var Slider = new RangeInputSlider({
+    element: document.getElementById('slider-1'),
+    minPoint: 2,
+    maxPoint: 4,
+    min: 1,
+    max: 5,
+    onValueChangeStop: function (newValues) {
+        var el = document.getElementById('values-1');
+        if (el) {
+            el.innerText = newValues.min + ' - ' + newValues.max;
+        }
+    },
+    onValueChange: function (newValues) {
+        var el = document.getElementById('values-1');
+        if (el) {
+            el.innerText =  newValues.min + ' - ' + newValues.max;
+        }
+    },
+    serifs: [
+        { position: 0, html: '1' },
+        { position: 25, html: '2' },
+        { position: 50, html: '3' },
+        { position: 75, html: '4' },
+        { position: 100, html: '5' }
+    ]
+});
+
+Slider.init();
+            </pre>
+        </div>
+
+        <div class="block">
+            <h2>Range from 18 to 100 with default step and two serifs</h2>
+            <div id="slider-2"></div>
+            <div class="values"> Values: <span id="values-2">18 - 45</span></div>
+
+            <h3>Code</h3>
+            <pre class="code">
+var Slider = new RangeInputSlider({
+    element: document.getElementById('slider-2'),
+    minPoint: 18,
+    maxPoint: 45,
+    min: 18,
+    max: 100,
+    onValueChangeStop: function (newValues) {
+        var el = document.getElementById('values-2');
+        if (el) {
+            el.innerText = newValues.min + ' - ' + newValues.max;
+        }
+    },
+    onValueChange: function (newValues) {
+        var el = document.getElementById('values-2');
+        if (el) {
+            el.innerText =  newValues.min + ' - ' + newValues.max;
+        }
+    },
+    serifs: [
+        { position: 0, html: '18' },
+        { position: 100, html: '100' }
+    ]
+});
+
+Slider.init();
+            </pre>
+        </div>
+
+
+    <div class="block">
+        <h2>Range from 1 to 100 with step 10 and 10 serifs with custom styles</h2>
+        <div id="slider-3"></div>
+        <div class="values"> Values: <span id="values-3">20 - 50</span></div>
+
+        <h3>Code</h3>
+        <pre class="code">
+var Slider = new RangeInputSlider({
+    element: document.getElementById('slider-3'),
+    minPoint: 20,
+    maxPoint: 50,
+    min: 1,
+    max: 100,
+    onValueChangeStop: function (newValues) {
+        var el = document.getElementById('values-3');
+        if (el) {
+            el.innerText = newValues.min + ' - ' + newValues.max;
+        }
+    },
+    onValueChange: function (newValues) {
+        var el = document.getElementById('values-3');
+        if (el) {
+            el.innerText =  newValues.min + ' - ' + newValues.max;
+        }
+    },
+    serifs: [
+        { position: 0, html: '&lt;span class="small-serif" style="color: red;"&gt;1&lt;/span&gt;' },
+        { position: 10, html: '&lt;span class="small-serif"&gt;10&lt;/span&gt;' },
+        { position: 20, html: '&lt;span class="small-serif"&gt;20&lt;/span&gt;' },
+        { position: 30, html: '&lt;span class="small-serif"&gt;30&lt;/span&gt;' },
+        { position: 40, html: '&lt;span class="small-serif"&gt;40&lt;/span&gt;' },
+        { position: 50, html: '&lt;span class="small-serif" style="color: red;"&gt;50&lt;/span&gt;' },
+        { position: 60, html: '&lt;span class="small-serif"&gt;60&lt;/span&gt;' },
+        { position: 70, html: '&lt;span class="small-serif"&gt;70&lt;/span&gt;' },
+        { position: 80, html: '&lt;span class="small-serif"&gt;80&lt;/span&gt;' },
+        { position: 90, html: '&lt;span class="small-serif"&gt;90&lt;/span&gt;' },
+        { position: 100, html: '&lt;span class="small-serif" style="color: red;"&gt;100&lt;/span&gt;' }
+    ]
+});
+
+Slider.init();
+            </pre>
+    </div>
+
+
+        <div class="block">
+            <h2>Range with custom styles</h2>
+            <p>Unfortunately you need styles with higher priority then one class. Because I don't want to force you write all styles of element by yourself.</p>
+            <div id="slider-4" class="slider-4"></div>
+            <div class="values"> Values: <span id="values-4">15 - 45</span></div>
+
+            <h3>Code</h3>
+            <pre class="code">
+var Slider = new RangeInputSlider({
+    element: document.getElementById('slider-4'),
+    minPoint: 15,
+    maxPoint: 45,
+    min: 1,
+    max: 100,
+    onValueChangeStop: function (newValues) {
+        var el = document.getElementById('values-4');
+        if (el) {
+            el.innerText = newValues.min + ' - ' + newValues.max;
+        }
+    },
+    onValueChange: function (newValues) {
+        var el = document.getElementById('values-4');
+        if (el) {
+            el.innerText =  newValues.min + ' - ' + newValues.max;
+        }
+    },
+    serifs: [
+        { position: 0, html: '1' },
+        { position: 100, html: '100' }
+    ],
+    cssClasses: {
+        wrapper: 'wrapper',
+        lineWrapper: 'line-wrapper',
+        line: 'line',
+        control: 'control',
+        activeRange: 'active-range',
+        serifs: 'serifs',
+        serif: 'serif'
+    }
+});
+
+Slider.init();
+            </pre>
+            <h3>CSS</h3>
+            <pre class="code">
+.slider-4 .wrapper {
+  background: darkblue;
+  padding: 15px;
+  margin-left: 30px;
+}
+
+.slider-4 .line {
+  background: #a0a0a0;
+}
+
+.slider-4 .control {
+  background: #ff6eec;
+  border: 1px solid #cc005e;
+}
+
+.slider-4 .active-range {
+  background: #37d3ff;
+  border: 1px solid #3d45a9;
+}
+
+.slider-4 .serifs {
+  left: -12px;
+  top: 17px;
+  right: -18px;
+}
+
+.slider-4 .serif {
+  color: darkblue;
+  font-weight: bold;
+}
+            </pre>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="lib/bundle.js"></script>
+</body>
+</html>
