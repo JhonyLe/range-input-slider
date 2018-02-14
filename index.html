@@ -3,6 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>Range input slider examples</title>
+    <style type="text/css">
+        body {
+            background: #edfbff;
+            font-family: Arial;
+        }
+
+        .content {
+            margin-top: 50px;
+        }
+
+        .header {
+            background: #3289A6;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        h2 {
+            color: #1c5263;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #1c5263;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .block {
+            padding: 10px 15px;
+            width: 80%;
+            border-bottom: 1px solid #3289A6;
+        }
+
+        .values {
+            padding: 10px 0;
+        }
+
+        .code {
+            background: dimgray;
+            color: white;
+            padding: 10px;
+            border: #000000;
+            max-height: 100px;
+            overflow: auto;
+        }
+
+        .small-serif {
+            font-size: 11px;
+        }
+
+        /* custom styles */
+
+        .slider-4 .wrapper {
+            background: darkblue;
+            padding: 15px;
+            margin-left: 30px;
+        }
+
+        .slider-4 .line-wrapper {
+        }
+
+
+        .slider-4 .line {
+            background: #a0a0a0;
+        }
+
+        .slider-4 .control {
+            background: #ff6eec;
+            border: 1px solid #cc005e;
+        }
+
+        .slider-4 .active-range {
+            background: #37d3ff;
+            border: 1px solid #3d45a9;
+        }
+
+        .slider-4 .serifs {
+            left: -12px;
+            top: 17px;
+            right: -18px;
+        }
+
+        .slider-4 .serif {
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -208,6 +302,6 @@ Slider.init();
         </div>
     </div>
 
-    <script type="text/javascript" src="lib/bundle.js"></script>
+    <script type="text/javascript" src="./lib/bundle.js"></script>
 </body>
 </html>
