@@ -1,6 +1,6 @@
 {
   "name": "range-input-slider",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Range input slider lib.",
   "main": "lib/index.js",
   "scripts": {

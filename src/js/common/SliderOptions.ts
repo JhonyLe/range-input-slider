@@ -31,7 +31,7 @@ interface SliderOptions {
     onValueChangeStop(values: Values): any;
     min: number;
     max: number;
-    element: HTMLElement | null;
+    element?: HTMLElement | null;
     orientation?: string; // will be nedded in future versions
     cssClasses?: CssClasses;
     serifs?: Serif[];

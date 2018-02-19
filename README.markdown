@@ -2,14 +2,16 @@
 
 Realization of capability of range input.
 
+## Demo
+You can see demo page [here](https://jhonyle.github.io/range-input-slider/ "Demo page")
+
 ## Installation
 `npm install range-input-slider --save`
 
 ## Documentation
 ### Interface:
 ```
-    const Slider = new InputRangeSlider({
-        element: document.getElementById('slider'),
+    const Slider = new InputRangeSlider(document.getElementById('slider'), {
         minPoint: 50,
         maxPoint: 100,
         min: 1,
