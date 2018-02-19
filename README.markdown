@@ -55,7 +55,6 @@ You can see demo page [here](https://jhonyle.github.io/range-input-slider/ "Demo
 | minPoint | number  | Default value for minimum value. Default position of minimum value control will be determ by this value. | 1 | yes |
 | maxPoint  | number | Default value for maximum value. Default position of maximum value control will be determ by this value.| 10 | yes |
 | step  | number | Value of interval between control position. Default value is 1. | 5 | no |
-| element  | HTMLElement  | Element which will be a parent for range input element. | `document.getElementById('price')` | yes|
 | onValueChangeStop | function  | Will be called every time when control position changing is stoped. | `(newValues) => {    console.log(`min: ${newValues.min}, max: ${newValues.max} `);    }` | yes |
 | onValueChange | function | Will be called every time when control position is changed. | `(newValues) => {    console.log(`min: ${newValues.min}, max: ${newValues.max} `);    } `| no |
 | serifs | array | Array of serifs. Serif is object with `position` - value in percents of left serif position and `html` - content of position. | `[{ position: 0, html: '<span style="color: red">1</span>' }, { position: 0, html: '100' }]` | no |
