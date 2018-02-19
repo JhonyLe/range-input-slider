@@ -2,6 +2,9 @@
 
 Realization of capability of range input.
 
+## Demo
+You can see demo page [here](https://jhonyle.github.io/range-input-slider/ "Demo page")
+
 ## Installation
 `npm install range-input-slider --save`
 
