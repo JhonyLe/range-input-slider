@@ -1,19 +1,18 @@
-import './styles/example.scss';
-import RangeInputSlider from 'slider/RangeInputSlider';
+import 'styles/example.scss';
+import RangeInputSlider from './index';
 
-new RangeInputSlider({
-    element: document.getElementById('slider-1'),
+new RangeInputSlider(document.getElementById('slider-1'), {
     minPoint: 2,
     maxPoint: 4,
     min: 1,
     max: 5,
-    onValueChangeStop: function (newValues) {
+    onValueChangeStop: function (newValues: any) {
         const el = document.getElementById('values-1');
         if (el) {
             el.innerText = newValues.min + ' - ' + newValues.max;
         }
     },
-    onValueChange: function (newValues) {
+    onValueChange: function (newValues: any) {
         const el = document.getElementById('values-1');
         if (el) {
             el.innerText =  newValues.min + ' - ' + newValues.max;
@@ -28,19 +27,18 @@ new RangeInputSlider({
     ]
 }).init();
 
-new RangeInputSlider({
-    element: document.getElementById('slider-2'),
+new RangeInputSlider(document.getElementById('slider-2'), {
     minPoint: 18,
     maxPoint: 45,
     min: 18,
     max: 100,
-    onValueChangeStop: function (newValues) {
+    onValueChangeStop: function(newValues : any) {
         const el = document.getElementById('values-2');
         if (el) {
             el.innerText = newValues.min + ' - ' + newValues.max;
         }
     },
-    onValueChange: function (newValues) {
+    onValueChange: function(newValues : any) {
         const el = document.getElementById('values-2');
         if (el) {
             el.innerText =  newValues.min + ' - ' + newValues.max;
@@ -53,20 +51,19 @@ new RangeInputSlider({
 }).init();
 
 
-new RangeInputSlider({
-    element: document.getElementById('slider-3'),
+new RangeInputSlider(document.getElementById('slider-3'), {
     minPoint: 20,
     maxPoint: 50,
     min: 1,
     max: 100,
     step: 10,
-    onValueChangeStop: function (newValues) {
+    onValueChangeStop: function (newValues : any) {
         const el = document.getElementById('values-3');
         if (el) {
             el.innerText = newValues.min + ' - ' + newValues.max;
         }
     },
-    onValueChange: function (newValues) {
+    onValueChange: function (newValues : any) {
         const el = document.getElementById('values-3');
         if (el) {
             el.innerText =  newValues.min + ' - ' + newValues.max;
@@ -87,19 +84,18 @@ new RangeInputSlider({
     ]
 }).init();
 
-new RangeInputSlider({
-    element: document.getElementById('slider-4'),
+new RangeInputSlider(document.getElementById('slider-4'), {
     minPoint: 15,
     maxPoint: 45,
     min: 1,
     max: 100,
-    onValueChangeStop: function (newValues) {
+    onValueChangeStop: function (newValues : any) {
         const el = document.getElementById('values-4');
         if (el) {
             el.innerText = newValues.min + ' - ' + newValues.max;
         }
     },
-    onValueChange: function (newValues) {
+    onValueChange: function (newValues : any) {
         const el = document.getElementById('values-4');
         if (el) {
             el.innerText =  newValues.min + ' - ' + newValues.max;
