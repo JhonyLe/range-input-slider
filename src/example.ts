@@ -99,7 +99,20 @@ import RangeInputSlider from './index';
         onValueChange: function (newValues : any) {
             const el = document.getElementById('values-4');
             if (el) {
-                el.innerText = newValues.min + ' - ' + newValues.max;
+                el.innerText =  newValues.min + ' - ' + newValues.max;
             }
-        }).init();
+        },
+        serifs: [
+            { position: 0, html: '1' },
+            { position: 100, html: '100' }
+        ],
+        cssClasses: {
+            wrapper: 'wrapper',
+            line: 'line',
+            control: 'control',
+            activeRange: 'active-range',
+            serifs: 'serifs',
+            serif: 'serif'
+        }
+    }).init();
 })();
