@@ -2,7 +2,7 @@ import SliderOptions, { controlInformation } from 'common/SliderOptions';
 import { isTouchSupported, MOUSE_EVENTS } from 'common/Events';
 import Validator from 'slider/Validator';
 import Renderer from 'slider/Renderer';
-import '../../styles/slider.scss';
+import 'styles/slider.scss';
 
 class RangeInputSlider {
     private options: SliderOptions;
@@ -14,9 +14,10 @@ class RangeInputSlider {
     private step: number = 0;
 
 
-    constructor(options: SliderOptions) {
+    constructor(element: HTMLElement | null, options: SliderOptions) {
         this.options = options;
-        this.renderer = new Renderer(options.element, options.cssClasses, options.min,  options.max, options.serifs);
+        this.options.element = element;
+        this.renderer = new Renderer(element, options.cssClasses, options.min,  options.max, options.serifs);
         this.mouseDown = this.onMouseDown.bind(this);
         this.mouseMove = this.onMouseMove.bind(this);
         this.mouseUp = this.onMouseUp.bind(this);

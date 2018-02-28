@@ -20,6 +20,7 @@ module.exports = {
     },
     aliases: {
         slider: path.resolve(__dirname, "../src/js/slider"),
-        common: path.resolve(__dirname, "../src/js/common")
+        common: path.resolve(__dirname, "../src/js/common"),
+        styles: path.resolve(__dirname, "../src/styles")
     }
 };
